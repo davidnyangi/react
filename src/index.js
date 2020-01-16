@@ -33,14 +33,32 @@
 
 //STEP 3 JSX=Javascript as XML
 //code doesn't run without a transpiler i.e babel
-const {createElement} = React
-const { render } = ReactDOM
+// const {createElement} = React
+// const { render } = ReactDOM
 
-render(
-    <h1 id='title' className='header' style={{backgroundColor:'orange', color:'white', fontFamily: 'verdana'}}>Helloy there
-    </h1>,
-    document.getElementById('react-container') //where you want to render
-)
+// render(
+//     <h1 id='title' className='header' style={{backgroundColor:'orange', color:'white', fontFamily: 'verdana'}}>Helloy there
+//     </h1>,
+//     document.getElementById('react-container') //where you want to render
+// )
 
 //BABEL transpile JSX to work on browser
 // use babel version 5 for in browser transpiling
+
+/*STEP 4  
+Remove 
+<script src="https://fb.me/react-15.1.0.js"></script>
+<script src="https://fb.me/react-dom-15.1.0.js"></script> 
+and install react and react-dom using npm then */
+
+import React from 'react'
+import {render} from 'react-dom'
+import {hello, goodbye} from './lib'
+
+render (
+    <div>
+        {hello}
+        {goodbye}
+    </div>,
+    document.getElementById('react-container')
+)
