@@ -1,0 +1,6 @@
+{
+    "presets":["latest","react","stage-0"]
+}
+
+//define all we want to transpile using babel.
+//will run all babel in  all latest ecmascripts features
