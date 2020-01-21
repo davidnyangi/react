@@ -54,13 +54,31 @@ and install react and react-dom using npm then */
 import React from 'react'
 import {render} from 'react-dom'
 import {hello, goodbye} from './lib'
-import { SkiDayCount }  from './components/SkiDayCount'
+import { SkiDayList }  from './components/SkiDayList'
 
 window.React = React
 render (
-       <SkiDayCount total={50}
-                    powder={20}
-                    backcountry={10}
-                    goal={100}/>,
+       <SkiDayList days = {
+           [
+               {
+                   resort: "Squa valey",
+                   date: new Date("1/2/2016"),
+                   powder: true,
+                   backcountry: false
+               },
+               {
+                resort: "Sssss",
+                date: new Date("1/12/2016"),
+                powder: false,
+                backcountry: false
+               },
+               {
+                resort: "Dav",
+                date: new Date("1/2/2016"),
+                powder: false,
+                backcountry: true
+            }
+           ]
+       }/>,
     document.getElementById('react-container')
 )
